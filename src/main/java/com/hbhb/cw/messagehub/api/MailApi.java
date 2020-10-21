@@ -1,7 +1,9 @@
 package com.hbhb.cw.messagehub.api;
 
+import com.hbhb.cw.messagehub.vo.MailVO;
+
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * @author xiaokang
@@ -10,5 +12,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface MailApi {
 
     @PostMapping("/post")
-    void postMail(@RequestParam String receiver, @RequestParam String title, @RequestParam String content);
+    void postMail(@RequestBody MailVO vo);
 }
